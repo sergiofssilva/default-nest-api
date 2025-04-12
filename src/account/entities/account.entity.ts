@@ -1,8 +1,9 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 import { Address } from '@/common/address-embedded';
+import { AbstractBaseEntity } from '@/common/entities/abstract-base.entity';
 
 @Entity()
-export class Account {
+export class Account extends AbstractBaseEntity {
   @PrimaryGeneratedColumn('uuid')
   accountId: string;
 
